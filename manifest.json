@@ -1,0 +1,35 @@
+{
+    "name": "Papillon Note",
+    "short_name": "Papillon Note",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFF5F5",
+    "theme_color": "#E8788A",
+    "description": "美容施術の経過を記録・管理するアプリ",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
