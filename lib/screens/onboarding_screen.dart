@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 
 /// オンボーディング画面
@@ -86,7 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onPressed: widget.onCompleted,
                   child: Text(
                     'スキップ',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 14,
                       color: AppTheme.textSecondary,
                     ),
@@ -132,7 +132,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     _currentPage == _pages.length - 1
                         ? 'はじめる'
                         : '次へ',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
@@ -186,7 +186,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // サブタイトル
           Text(
             page.subtitle,
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
               color: AppTheme.accent,
@@ -198,7 +198,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // タイトル
           Text(
             page.title,
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w700,
               color: AppTheme.textPrimary,
@@ -210,7 +210,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // 説明文
           Text(
             page.body,
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 14,
               color: AppTheme.textSecondary,
               height: 1.8,

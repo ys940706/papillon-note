@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 import '../app_theme.dart';
@@ -68,7 +68,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
         SnackBar(
           content: Text(
             '施術を選択してください',
-            style: GoogleFonts.zenMaruGothic(),
+            style: TextStyle(),
           ),
           backgroundColor: AppTheme.danger,
           behavior: SnackBarBehavior.floating,
@@ -131,7 +131,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
               // タイトル
               Text(
                 '新しい施術を追加',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -142,7 +142,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
               // ===== カテゴリ選択 =====
               Text(
                 '施術カテゴリ',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                   color: AppTheme.textSecondary,
@@ -161,7 +161,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                     value: _selectedCategory,
                     hint: Text(
                       'カテゴリを選択',
-                      style: GoogleFonts.zenMaruGothic(fontSize: 14, color: AppTheme.textSecondary),
+                      style: TextStyle(fontSize: 14, color: AppTheme.textSecondary),
                     ),
                     icon: const Icon(Icons.keyboard_arrow_down, color: AppTheme.accent),
                     borderRadius: BorderRadius.circular(14),
@@ -174,7 +174,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                             const SizedBox(width: 10),
                             Text(
                               cat.label,
-                              style: GoogleFonts.zenMaruGothic(fontSize: 14),
+                              style: TextStyle(fontSize: 14),
                             ),
                           ],
                         ),
@@ -194,7 +194,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
               // ===== 術式選択 =====
               Text(
                 '術式',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                   color: AppTheme.textSecondary,
@@ -213,7 +213,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                     value: _selectedSurgeryName,
                     hint: Text(
                       _selectedCategory == null ? 'まずカテゴリを選択' : '術式を選択',
-                      style: GoogleFonts.zenMaruGothic(fontSize: 14, color: AppTheme.textSecondary),
+                      style: TextStyle(fontSize: 14, color: AppTheme.textSecondary),
                     ),
                     icon: const Icon(Icons.keyboard_arrow_down, color: AppTheme.accent),
                     borderRadius: BorderRadius.circular(14),
@@ -223,7 +223,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                         value: name,
                         child: Text(
                           name,
-                          style: GoogleFonts.zenMaruGothic(fontSize: 13),
+                          style: TextStyle(fontSize: 13),
                           overflow: TextOverflow.ellipsis,
                         ),
                       );
@@ -256,7 +256,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                       Expanded(
                         child: Text(
                           _selectedSurgeryName!,
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: AppTheme.accent,
@@ -276,7 +276,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
               // 手術日
               Text(
                 '手術日',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                   color: AppTheme.textSecondary,
@@ -298,7 +298,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                       const SizedBox(width: 12),
                       Text(
                         DateFormat('yyyy年 M月 d日').format(_selectedDate),
-                        style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                        style: TextStyle(fontSize: 15),
                       ),
                       const Spacer(),
                       const Icon(Icons.chevron_right, color: AppTheme.textSecondary),
@@ -320,7 +320,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                     const SizedBox(width: 4),
                     Text(
                       '詳細情報（任意）',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 13,
                         color: AppTheme.accent,
                         fontWeight: FontWeight.w600,
@@ -339,7 +339,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                     hintText: 'クリニック名',
                     prefixIcon: Icon(Icons.local_hospital_outlined, color: AppTheme.accent),
                   ),
-                  style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                  style: TextStyle(fontSize: 15),
                 ),
                 const SizedBox(height: 12),
                 TextField(
@@ -348,7 +348,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                     hintText: '執刀医',
                     prefixIcon: Icon(Icons.person_outline, color: AppTheme.accent),
                   ),
-                  style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                  style: TextStyle(fontSize: 15),
                 ),
                 const SizedBox(height: 12),
                 TextField(
@@ -358,7 +358,7 @@ class _AddSurgeryModalState extends State<AddSurgeryModal> {
                     prefixIcon: Icon(Icons.payments_outlined, color: AppTheme.accent),
                   ),
                   keyboardType: TextInputType.text,
-                  style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                  style: TextStyle(fontSize: 15),
                 ),
               ],
 

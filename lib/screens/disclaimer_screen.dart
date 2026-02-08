@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 
 /// 医療免責事項 & 利用規約画面
@@ -31,7 +31,7 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
               const SizedBox(height: 16),
               Text(
                 '利用規約 & 医療免責事項',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -40,7 +40,7 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
               const SizedBox(height: 8),
               Text(
                 'ご利用の前に以下をお読みください',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 13,
                   color: AppTheme.textSecondary,
                 ),
@@ -164,7 +164,7 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
                       Expanded(
                         child: Text(
                           '上記の利用規約および医療免責事項に同意します',
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.w600,
                             color: _agreed
@@ -200,7 +200,7 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
                   ),
                   child: Text(
                     '同意してはじめる',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
@@ -220,7 +220,7 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
       padding: const EdgeInsets.only(bottom: 10),
       child: Text(
         text,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w700,
           color: AppTheme.textPrimary,
@@ -232,7 +232,7 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
   Widget _bodyText(String text) {
     return Text(
       text,
-      style: GoogleFonts.zenMaruGothic(
+      style: TextStyle(
         fontSize: 12.5,
         color: AppTheme.textPrimary,
         height: 1.8,

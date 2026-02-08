@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 import '../models/medical_guide.dart';
 import '../data/medical_data.dart';
@@ -49,7 +49,7 @@ class DowntimeTimeline extends StatelessWidget {
               const SizedBox(width: 12),
               Text(
                 'ダウンタイム経過',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -193,7 +193,7 @@ class _PhaseItemState extends State<_PhaseItem> {
                                       ),
                                       child: Text(
                                         'NOW',
-                                        style: GoogleFonts.zenMaruGothic(
+                                        style: TextStyle(
                                           fontSize: 9,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.white,
@@ -203,7 +203,7 @@ class _PhaseItemState extends State<_PhaseItem> {
                                   Flexible(
                                     child: Text(
                                       widget.phase.title,
-                                      style: GoogleFonts.zenMaruGothic(
+                                      style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: widget.isActive ? FontWeight.w700 : FontWeight.w600,
                                         color: widget.isActive
@@ -219,7 +219,7 @@ class _PhaseItemState extends State<_PhaseItem> {
                               const SizedBox(height: 2),
                               Text(
                                 '${widget.phase.startDay}日目〜${widget.phase.endDay}日目',
-                                style: GoogleFonts.zenMaruGothic(
+                                style: TextStyle(
                                   fontSize: 11,
                                   color: AppTheme.textSecondary,
                                 ),
@@ -240,7 +240,7 @@ class _PhaseItemState extends State<_PhaseItem> {
                       const SizedBox(height: 10),
                       Text(
                         widget.phase.description,
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 12,
                           color: AppTheme.textPrimary,
                           height: 1.6,
@@ -250,7 +250,7 @@ class _PhaseItemState extends State<_PhaseItem> {
                         const SizedBox(height: 10),
                         Text(
                           '🩺 この時期の正常な症状',
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w700,
                             color: AppTheme.textSecondary,
@@ -262,11 +262,11 @@ class _PhaseItemState extends State<_PhaseItem> {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('• ', style: GoogleFonts.zenMaruGothic(fontSize: 11, color: AppTheme.textSecondary)),
+                              Text('• ', style: TextStyle(fontSize: 11, color: AppTheme.textSecondary)),
                               Expanded(
                                 child: Text(
                                   s,
-                                  style: GoogleFonts.zenMaruGothic(fontSize: 11, color: AppTheme.textSecondary),
+                                  style: TextStyle(fontSize: 11, color: AppTheme.textSecondary),
                                 ),
                               ),
                             ],
@@ -277,7 +277,7 @@ class _PhaseItemState extends State<_PhaseItem> {
                         const SizedBox(height: 10),
                         Text(
                           '💡 ケアのポイント',
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w700,
                             color: const Color(0xFF4A90A4),
@@ -289,11 +289,11 @@ class _PhaseItemState extends State<_PhaseItem> {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('• ', style: GoogleFonts.zenMaruGothic(fontSize: 11, color: const Color(0xFF4A90A4))),
+                              Text('• ', style: TextStyle(fontSize: 11, color: const Color(0xFF4A90A4))),
                               Expanded(
                                 child: Text(
                                   t,
-                                  style: GoogleFonts.zenMaruGothic(fontSize: 11, color: const Color(0xFF4A90A4)),
+                                  style: TextStyle(fontSize: 11, color: const Color(0xFF4A90A4)),
                                 ),
                               ),
                             ],

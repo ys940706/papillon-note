@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 import '../models/care_task.dart';
 
@@ -68,7 +68,7 @@ class CareTaskTile extends StatelessWidget {
                 children: [
                   Text(
                     task.title,
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: task.enabled ? AppTheme.textPrimary : AppTheme.textSecondary,
@@ -86,7 +86,7 @@ class CareTaskTile extends StatelessWidget {
                       const SizedBox(width: 4),
                       Text(
                         task.frequencyLabel,
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 12,
                           color: task.enabled ? AppTheme.accent : AppTheme.textSecondary,
                         ),
@@ -114,16 +114,16 @@ class CareTaskTile extends StatelessWidget {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                     title: Text(
                       'タスクを削除',
-                      style: GoogleFonts.zenMaruGothic(fontWeight: FontWeight.w700),
+                      style: TextStyle(fontWeight: FontWeight.w700),
                     ),
                     content: Text(
                       '「${task.title}」を削除してもよろしいですか？',
-                      style: GoogleFonts.zenMaruGothic(),
+                      style: TextStyle(),
                     ),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(ctx),
-                        child: Text('キャンセル', style: GoogleFonts.zenMaruGothic()),
+                        child: Text('キャンセル', style: TextStyle()),
                       ),
                       TextButton(
                         onPressed: () {
@@ -131,7 +131,7 @@ class CareTaskTile extends StatelessWidget {
                           onDelete();
                         },
                         style: TextButton.styleFrom(foregroundColor: AppTheme.danger),
-                        child: Text('削除', style: GoogleFonts.zenMaruGothic(fontWeight: FontWeight.w700)),
+                        child: Text('削除', style: TextStyle(fontWeight: FontWeight.w700)),
                       ),
                     ],
                   ),

@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
+  // フォントファミリー
+  static const String fontFamily = 'Hiragino Kaku Gothic ProN';
+  static const List<String> fontFamilyFallback = [
+    'Hiragino Sans',
+    'Noto Sans JP',
+    'sans-serif',
+  ];
+
   // カラーパレット
   static const Color primaryBg = Color(0xFFF8F0F0);
   static const Color accent = Color(0xFFD4A5A5);
@@ -37,6 +44,7 @@ class AppTheme {
   static ThemeData get theme {
     return ThemeData(
       useMaterial3: true,
+      fontFamily: fontFamily,
       scaffoldBackgroundColor: primaryBg,
       colorScheme: ColorScheme.fromSeed(
         seedColor: accent,
@@ -47,20 +55,22 @@ class AppTheme {
         surface: cardBg,
         onSurface: textPrimary,
       ),
-      textTheme: GoogleFonts.zenMaruGothicTextTheme().apply(
+      textTheme: const TextTheme().apply(
         bodyColor: textPrimary,
         displayColor: textPrimary,
+        fontFamily: fontFamily,
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        titleTextStyle: GoogleFonts.zenMaruGothic(
+        titleTextStyle: TextStyle(
+          fontFamily: fontFamily,
           fontSize: 18,
           fontWeight: FontWeight.w700,
           color: textPrimary,
         ),
-        iconTheme: const IconThemeData(color: textPrimary),
+        iconTheme: IconThemeData(color: textPrimary),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: accent,
@@ -91,7 +101,8 @@ class AppTheme {
           borderSide: const BorderSide(color: accent, width: 1.5),
         ),
         contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
-        hintStyle: GoogleFonts.zenMaruGothic(
+        hintStyle: const TextStyle(
+          fontFamily: fontFamily,
           color: textSecondary,
           fontSize: 14,
         ),
@@ -105,7 +116,8 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
-          textStyle: GoogleFonts.zenMaruGothic(
+          textStyle: const TextStyle(
+            fontFamily: fontFamily,
             fontSize: 15,
             fontWeight: FontWeight.w700,
           ),

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
 import '../app_theme.dart';
 import '../models/surgery.dart';
@@ -128,7 +128,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
               // タイトル
               Text(
                 '施術情報を編集',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -153,7 +153,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
                           children: [
                             Text(cat.icon, style: const TextStyle(fontSize: 18)),
                             const SizedBox(width: 10),
-                            Text(cat.label, style: GoogleFonts.zenMaruGothic(fontSize: 14)),
+                            Text(cat.label, style: TextStyle(fontSize: 14)),
                           ],
                         ),
                       );
@@ -188,7 +188,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
                         value: name,
                         child: Text(
                           name,
-                          style: GoogleFonts.zenMaruGothic(fontSize: 13),
+                          style: TextStyle(fontSize: 13),
                           overflow: TextOverflow.ellipsis,
                         ),
                       );
@@ -219,7 +219,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
                       const SizedBox(width: 12),
                       Text(
                         DateFormat('yyyy年 M月 d日').format(_selectedDate),
-                        style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                        style: TextStyle(fontSize: 15),
                       ),
                       const Spacer(),
                       const Icon(Icons.chevron_right, color: AppTheme.textSecondary),
@@ -238,7 +238,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
                   hintText: 'クリニック名',
                   prefixIcon: Icon(Icons.local_hospital_outlined, color: AppTheme.accent),
                 ),
-                style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                style: TextStyle(fontSize: 15),
               ),
               const SizedBox(height: 12),
 
@@ -251,7 +251,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
                   hintText: '執刀医',
                   prefixIcon: Icon(Icons.person_outline, color: AppTheme.accent),
                 ),
-                style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                style: TextStyle(fontSize: 15),
               ),
               const SizedBox(height: 12),
 
@@ -265,7 +265,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
                   prefixIcon: Icon(Icons.payments_outlined, color: AppTheme.accent),
                 ),
                 keyboardType: TextInputType.text,
-                style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                style: TextStyle(fontSize: 15),
               ),
 
               const SizedBox(height: 32),
@@ -288,7 +288,7 @@ class _EditSurgeryModalState extends State<EditSurgeryModal> {
   Widget _sectionLabel(String text) {
     return Text(
       text,
-      style: GoogleFonts.zenMaruGothic(
+      style: TextStyle(
         fontSize: 13,
         fontWeight: FontWeight.w600,
         color: AppTheme.textSecondary,

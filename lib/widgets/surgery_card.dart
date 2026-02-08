@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
 import '../app_theme.dart';
 import '../models/surgery.dart';
@@ -121,7 +121,7 @@ class SurgeryCard extends StatelessWidget {
                       Expanded(
                         child: Text(
                           surgery.name,
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
@@ -139,7 +139,7 @@ class SurgeryCard extends StatelessWidget {
                               children: [
                                 const Icon(Icons.delete_outline, color: AppTheme.danger, size: 20),
                                 const SizedBox(width: 8),
-                                Text('削除', style: GoogleFonts.zenMaruGothic(color: AppTheme.danger)),
+                                Text('削除', style: TextStyle(color: AppTheme.danger)),
                               ],
                             ),
                           ),
@@ -156,7 +156,7 @@ class SurgeryCard extends StatelessWidget {
                   // 下部：術後日数を大きく表示
                   Text(
                     surgery.daysLabel,
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.w900,
                       color: Colors.white,
@@ -166,7 +166,7 @@ class SurgeryCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     DateFormat('yyyy.MM.dd').format(surgery.date),
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 13,
                       color: Colors.white.withOpacity(0.7),
                       fontWeight: FontWeight.w500,

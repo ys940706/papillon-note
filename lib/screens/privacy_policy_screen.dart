@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 
 /// プライバシーポリシー画面
@@ -34,7 +34,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
         ),
         title: Text(
           'プライバシーポリシー',
-          style: GoogleFonts.zenMaruGothic(
+          style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
             color: AppTheme.textPrimary,
@@ -161,7 +161,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   Widget _heading(String text) {
     return Text(
       text,
-      style: GoogleFonts.zenMaruGothic(
+      style: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w700,
         color: AppTheme.textPrimary,
@@ -174,7 +174,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 4),
       child: Text(
         text,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 12,
           color: AppTheme.textSecondary,
         ),
@@ -187,7 +187,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20, bottom: 8),
       child: Text(
         text,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w700,
           color: AppTheme.textPrimary,
@@ -199,7 +199,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   Widget _body(String text) {
     return Text(
       text,
-      style: GoogleFonts.zenMaruGothic(
+      style: TextStyle(
         fontSize: 13,
         color: AppTheme.textPrimary,
         height: 1.8,
@@ -221,7 +221,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
           Expanded(
             child: Text(
               text,
-              style: GoogleFonts.zenMaruGothic(
+              style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w600,
                 color: AppTheme.accent,
@@ -250,7 +250,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
               const SizedBox(width: 6),
               Text(
                 'Amazonアソシエイト・プログラム',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -264,7 +264,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
             'よってサイトが紹介料を獲得できる手段を提供することを'
             '目的に設定されたアフィリエイトプログラムである、'
             'Amazonアソシエイト・プログラムの参加者です。',
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 12,
               color: AppTheme.textPrimary,
               height: 1.7,

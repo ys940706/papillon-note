@@ -1,6 +1,6 @@
-import 'dart:io';
+﻿import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:image_picker/image_picker.dart';
 import '../app_theme.dart';
 import '../models/surgery.dart';
@@ -76,7 +76,7 @@ class _ReportScreenState extends State<ReportScreen> {
       appBar: AppBar(
         title: Text(
           '経過レポート作成',
-          style: GoogleFonts.zenMaruGothic(fontWeight: FontWeight.w700),
+          style: TextStyle(fontWeight: FontWeight.w700),
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -105,14 +105,14 @@ class _ReportScreenState extends State<ReportScreen> {
                       children: [
                         Text(
                           widget.surgery.name,
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                         Text(
                           widget.surgery.daysLabel,
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 13,
                             color: AppTheme.accent,
                           ),
@@ -129,7 +129,7 @@ class _ReportScreenState extends State<ReportScreen> {
             // 写真選択エリア
             Text(
               '写真を選択',
-              style: GoogleFonts.zenMaruGothic(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: AppTheme.textPrimary,
@@ -165,7 +165,7 @@ class _ReportScreenState extends State<ReportScreen> {
                     : const Icon(Icons.auto_awesome),
                 label: Text(
                   _generating ? '生成中...' : 'コラージュを生成',
-                  style: GoogleFonts.zenMaruGothic(fontWeight: FontWeight.w700),
+                  style: TextStyle(fontWeight: FontWeight.w700),
                 ),
               ),
             ),
@@ -175,7 +175,7 @@ class _ReportScreenState extends State<ReportScreen> {
               const SizedBox(height: 24),
               Text(
                 'プレビュー',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -203,7 +203,7 @@ class _ReportScreenState extends State<ReportScreen> {
                   icon: const Icon(Icons.share, color: Colors.white),
                   label: Text(
                     'Xに投稿する',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
@@ -257,7 +257,7 @@ class _ReportScreenState extends State<ReportScreen> {
                         ),
                         child: Text(
                           label,
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 11,
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
@@ -279,7 +279,7 @@ class _ReportScreenState extends State<ReportScreen> {
                   const SizedBox(height: 8),
                   Text(
                     label,
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: AppTheme.textSecondary,
@@ -287,7 +287,7 @@ class _ReportScreenState extends State<ReportScreen> {
                   ),
                   Text(
                     'タップして選択',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 11,
                       color: AppTheme.textSecondary.withOpacity(0.6),
                     ),

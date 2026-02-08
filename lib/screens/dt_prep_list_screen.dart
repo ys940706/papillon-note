@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 import '../app_theme.dart';
 
@@ -76,7 +76,7 @@ class DtPrepListScreen extends StatelessWidget {
         ),
         title: Text(
           'DT準備リスト',
-          style: GoogleFonts.zenMaruGothic(
+          style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
             color: AppTheme.textPrimary,
@@ -107,7 +107,7 @@ class DtPrepListScreen extends StatelessWidget {
                     children: [
                       Text(
                         'ダウンタイムに備えよう',
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
                           color: AppTheme.textPrimary,
@@ -116,7 +116,7 @@ class DtPrepListScreen extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         '施術前に準備しておくと安心なアイテムをまとめました',
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 11,
                           color: AppTheme.textSecondary,
                         ),
@@ -177,7 +177,7 @@ class DtPrepListScreen extends StatelessWidget {
                         children: [
                           Text(
                             item.name,
-                            style: GoogleFonts.zenMaruGothic(
+                            style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
                               color: AppTheme.textPrimary,
@@ -186,7 +186,7 @@ class DtPrepListScreen extends StatelessWidget {
                           const SizedBox(height: 4),
                           Text(
                             item.description,
-                            style: GoogleFonts.zenMaruGothic(
+                            style: TextStyle(
                               fontSize: 12,
                               color: AppTheme.textSecondary,
                               height: 1.6,
@@ -217,7 +217,7 @@ class DtPrepListScreen extends StatelessWidget {
                           const SizedBox(width: 4),
                           Text(
                             'ポイント',
-                            style: GoogleFonts.zenMaruGothic(
+                            style: TextStyle(
                               fontSize: 11,
                               fontWeight: FontWeight.w700,
                               color: AppTheme.accent,
@@ -231,11 +231,11 @@ class DtPrepListScreen extends StatelessWidget {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('• ', style: GoogleFonts.zenMaruGothic(fontSize: 11, color: AppTheme.textSecondary)),
+                            Text('• ', style: TextStyle(fontSize: 11, color: AppTheme.textSecondary)),
                             Expanded(
                               child: Text(
                                 tip,
-                                style: GoogleFonts.zenMaruGothic(fontSize: 11, color: AppTheme.textSecondary),
+                                style: TextStyle(fontSize: 11, color: AppTheme.textSecondary),
                               ),
                             ),
                           ],
@@ -255,7 +255,7 @@ class DtPrepListScreen extends StatelessWidget {
                     icon: const Icon(Icons.open_in_new, size: 16),
                     label: Text(
                       'Amazonで見る',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
                       ),

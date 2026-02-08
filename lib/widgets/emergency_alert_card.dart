@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 import '../models/medical_guide.dart';
 import '../data/medical_data.dart';
@@ -58,7 +58,7 @@ class EmergencyAlertCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   'こんな症状が出たら病院へ連絡',
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                     color: AppTheme.textPrimary,
@@ -86,7 +86,7 @@ class EmergencyAlertCard extends StatelessWidget {
                 Expanded(
                   child: Text(
                     '※ 本情報は一般的な医学知識に基づく参考情報です。個別の症状については必ず担当医にご相談ください。',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 10,
                       color: const Color(0xFF9E9E9E),
                       height: 1.5,
@@ -140,7 +140,7 @@ class _AlertItem extends StatelessWidget {
                 ),
                 child: Text(
                   isDanger ? '緊急' : '注意',
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 9,
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
@@ -151,7 +151,7 @@ class _AlertItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   alert.symptom,
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: color,
@@ -163,7 +163,7 @@ class _AlertItem extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             alert.description,
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 11,
               color: AppTheme.textPrimary,
               height: 1.5,

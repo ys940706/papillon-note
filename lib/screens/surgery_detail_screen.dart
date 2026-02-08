@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 import '../app_theme.dart';
@@ -81,7 +81,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             title: Text(
               'ケアタスクを追加',
-              style: GoogleFonts.zenMaruGothic(fontWeight: FontWeight.w700, fontSize: 18),
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
             ),
             content: SingleChildScrollView(
               child: Column(
@@ -100,12 +100,12 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                         borderSide: BorderSide.none,
                       ),
                     ),
-                    style: GoogleFonts.zenMaruGothic(fontSize: 15),
+                    style: TextStyle(fontSize: 15),
                   ),
                   const SizedBox(height: 20),
                   Text(
                     '通知頻度',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: AppTheme.textSecondary,
@@ -138,7 +138,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                               child: Center(
                                 child: Text(
                                   '1日◯回',
-                                  style: GoogleFonts.zenMaruGothic(
+                                  style: TextStyle(
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
                                     color: frequencyType == 'timesPerDay'
@@ -167,7 +167,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                               child: Center(
                                 child: Text(
                                   '◯時間おき',
-                                  style: GoogleFonts.zenMaruGothic(
+                                  style: TextStyle(
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
                                     color: frequencyType == 'interval'
@@ -206,7 +206,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                       const SizedBox(width: 16),
                       Text(
                         '$frequencyValue',
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.w700,
                           color: AppTheme.accent,
@@ -235,7 +235,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                       frequencyType == 'timesPerDay'
                           ? '1日 $frequencyValue 回'
                           : '$frequencyValue 時間おき',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 14,
                         color: AppTheme.textSecondary,
                       ),
@@ -272,7 +272,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text('キャンセル', style: GoogleFonts.zenMaruGothic()),
+                child: Text('キャンセル', style: TextStyle()),
               ),
               ElevatedButton(
                 onPressed: () async {
@@ -292,7 +292,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                   await _loadTasks();
                   if (context.mounted) Navigator.pop(context);
                 },
-                child: Text('追加', style: GoogleFonts.zenMaruGothic()),
+                child: Text('追加', style: TextStyle()),
               ),
             ],
           );
@@ -324,7 +324,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
         ),
         child: Text(
           label,
-          style: GoogleFonts.zenMaruGothic(fontSize: 12, color: AppTheme.textPrimary),
+          style: TextStyle(fontSize: 12, color: AppTheme.textPrimary),
         ),
       ),
     );
@@ -402,7 +402,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                         ),
                         child: Text(
                           '${_surgery.category.icon} ${_surgery.category.label}',
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 12,
                             color: Colors.white,
                           ),
@@ -411,7 +411,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                       const SizedBox(height: 8),
                       Text(
                         _surgery.daysLabel,
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.w900,
                           color: Colors.white,
@@ -420,7 +420,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                       const SizedBox(height: 4),
                       Text(
                         _surgery.name,
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 16,
                           color: Colors.white.withOpacity(0.8),
                           fontWeight: FontWeight.w500,
@@ -429,7 +429,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                       const SizedBox(height: 8),
                       Text(
                         DateFormat('yyyy年 M月 d日 施術').format(_surgery.date),
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 12,
                           color: Colors.white.withOpacity(0.6),
                         ),
@@ -480,7 +480,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                         const SizedBox(width: 4),
                         Text(
                           '施術情報を編集',
-                          style: GoogleFonts.zenMaruGothic(
+                          style: TextStyle(
                             fontSize: 12,
                             color: AppTheme.accent,
                             fontWeight: FontWeight.w600,
@@ -523,7 +523,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                 children: [
                   Text(
                     'ケアスケジュール',
-                    style: GoogleFonts.zenMaruGothic(
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                       color: AppTheme.textPrimary,
@@ -533,7 +533,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                   TextButton.icon(
                     onPressed: _showAddTaskDialog,
                     icon: const Icon(Icons.add, size: 18),
-                    label: Text('追加', style: GoogleFonts.zenMaruGothic(fontSize: 13)),
+                    label: Text('追加', style: TextStyle(fontSize: 13)),
                   ),
                 ],
               ),
@@ -563,7 +563,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                     const SizedBox(height: 12),
                     Text(
                       'ケアタスクがありません',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 14,
                         color: AppTheme.textSecondary,
                       ),
@@ -571,7 +571,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
                     const SizedBox(height: 4),
                     Text(
                       '「＋追加」ボタンからタスクを作成しましょう',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 12,
                         color: AppTheme.textSecondary.withOpacity(0.7),
                       ),
@@ -631,7 +631,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
         const SizedBox(width: 10),
         Text(
           label,
-          style: GoogleFonts.zenMaruGothic(
+          style: TextStyle(
             fontSize: 13,
             color: AppTheme.textSecondary,
           ),
@@ -639,7 +639,7 @@ class _SurgeryDetailScreenState extends State<SurgeryDetailScreen> {
         const Spacer(),
         Text(
           value,
-          style: GoogleFonts.zenMaruGothic(
+          style: TextStyle(
             fontSize: 14,
             fontWeight: isEmpty ? FontWeight.w400 : FontWeight.w600,
             color: isEmpty ? AppTheme.textSecondary.withOpacity(0.5) : AppTheme.textPrimary,

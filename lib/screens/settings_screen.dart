@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 import '../app_theme.dart';
 import '../main.dart';
@@ -47,7 +47,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         title: Text(
           '設定',
-          style: GoogleFonts.zenMaruGothic(
+          style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
             color: AppTheme.textPrimary,
@@ -165,7 +165,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(height: 4),
                 Text(
                   'Papillon Note',
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
                     color: AppTheme.textPrimary,
@@ -174,7 +174,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(height: 2),
                 Text(
                   'Version 1.0.0',
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 12,
                     color: AppTheme.textSecondary,
                   ),
@@ -182,7 +182,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(height: 2),
                 Text(
                   '© 2026 Studio Papillon',
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 11,
                     color: AppTheme.textSecondary,
                   ),
@@ -203,7 +203,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       padding: const EdgeInsets.only(left: 4, bottom: 8),
       child: Text(
         text,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w700,
           color: AppTheme.textPrimary,
@@ -250,7 +250,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       title: Text(
         title,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w600,
         ),
@@ -258,7 +258,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       subtitle: subtitle != null
           ? Text(
               subtitle,
-              style: GoogleFonts.zenMaruGothic(
+              style: TextStyle(
                 fontSize: 11,
                 color: AppTheme.textSecondary,
               ),
@@ -291,14 +291,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       title: Text(
         title,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w600,
         ),
       ),
       subtitle: Text(
         subtitle,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 11,
           color: AppTheme.textSecondary,
         ),
@@ -331,7 +331,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       title: Text(
         title,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w600,
           color: AppTheme.danger,
@@ -339,7 +339,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       subtitle: Text(
         subtitle,
-        style: GoogleFonts.zenMaruGothic(
+        style: TextStyle(
           fontSize: 11,
           color: AppTheme.textSecondary,
         ),
@@ -385,7 +385,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const SizedBox(width: 8),
             Text(
               'データの全削除',
-              style: GoogleFonts.zenMaruGothic(
+              style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 18,
               ),
@@ -394,19 +394,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         content: Text(
           'すべての施術記録・ケアスケジュールが\n完全に削除されます。\n\nこの操作は取り消せません。\n本当に削除しますか？',
-          style: GoogleFonts.zenMaruGothic(fontSize: 14, height: 1.6),
+          style: TextStyle(fontSize: 14, height: 1.6),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
             child: Text('キャンセル',
-                style: GoogleFonts.zenMaruGothic()),
+                style: TextStyle()),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
             style: TextButton.styleFrom(foregroundColor: AppTheme.danger),
             child: Text('すべて削除',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                     fontWeight: FontWeight.w700)),
           ),
         ],

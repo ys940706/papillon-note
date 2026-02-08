@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
 import '../app_theme.dart';
 import '../models/surgery.dart';
@@ -73,7 +73,7 @@ class ReminderCard extends StatelessWidget {
               const SizedBox(width: 12),
               Text(
                 '再施術リマインド',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -101,7 +101,7 @@ class ReminderCard extends StatelessWidget {
                     children: [
                       Text(
                         statusText,
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w700,
                           color: borderColor,
@@ -110,7 +110,7 @@ class ReminderCard extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         '効果期限：${DateFormat('yyyy年 M月 d日').format(expiryDate)}',
-                        style: GoogleFonts.zenMaruGothic(
+                        style: TextStyle(
                           fontSize: 11,
                           color: AppTheme.textSecondary,
                         ),
@@ -143,7 +143,7 @@ class ReminderCard extends StatelessWidget {
                     const SizedBox(width: 6),
                     Text(
                       '学術的根拠',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         color: AppTheme.accent,
@@ -154,7 +154,7 @@ class ReminderCard extends StatelessWidget {
                 const SizedBox(height: 6),
                 Text(
                   reminderInfo.note,
-                  style: GoogleFonts.zenMaruGothic(
+                  style: TextStyle(
                     fontSize: 11,
                     color: AppTheme.textSecondary,
                     height: 1.6,
@@ -196,7 +196,7 @@ class ReminderCard extends StatelessWidget {
                       isExpired
                           ? '再施術をご検討ください。クリニックへの予約をおすすめします。'
                           : 'そろそろ再施術の時期です。早めの予約をおすすめします。',
-                      style: GoogleFonts.zenMaruGothic(
+                      style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w600,
                         color: isExpired ? const Color(0xFFE53935) : const Color(0xFFFF9800),
@@ -233,15 +233,15 @@ class ReminderCard extends StatelessWidget {
           children: [
             Text(
               '施術日',
-              style: GoogleFonts.zenMaruGothic(fontSize: 10, color: AppTheme.textSecondary),
+              style: TextStyle(fontSize: 10, color: AppTheme.textSecondary),
             ),
             Text(
               '${(progress * 100).round()}% 経過',
-              style: GoogleFonts.zenMaruGothic(fontSize: 10, fontWeight: FontWeight.w600, color: barColor),
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: barColor),
             ),
             Text(
               '効果期限',
-              style: GoogleFonts.zenMaruGothic(fontSize: 10, color: AppTheme.textSecondary),
+              style: TextStyle(fontSize: 10, color: AppTheme.textSecondary),
             ),
           ],
         ),
@@ -272,11 +272,11 @@ class ReminderCard extends StatelessWidget {
         children: [
           Text(
             '$label：',
-            style: GoogleFonts.zenMaruGothic(fontSize: 10, color: AppTheme.textSecondary),
+            style: TextStyle(fontSize: 10, color: AppTheme.textSecondary),
           ),
           Text(
             value,
-            style: GoogleFonts.zenMaruGothic(fontSize: 10, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
           ),
         ],
       ),

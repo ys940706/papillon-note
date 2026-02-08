@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+﻿import 'package:flutter/material.dart';
+
 import '../app_theme.dart';
 import '../models/surgery.dart';
 import '../services/storage_service.dart';
@@ -77,11 +77,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Text(
           '削除確認',
-          style: GoogleFonts.zenMaruGothic(fontWeight: FontWeight.w700),
+          style: TextStyle(fontWeight: FontWeight.w700),
         ),
         content: Text(
           '「${surgery.name}」を削除しますか？\nこの施術に関連するケアタスクも削除されます。',
-          style: GoogleFonts.zenMaruGothic(),
+          style: TextStyle(),
         ),
         actions: [
           TextButton(
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               titlePadding: const EdgeInsets.only(left: 24, bottom: 16),
               title: Text(
                 'Papillon Note',
-                style: GoogleFonts.zenMaruGothic(
+                style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           const SizedBox(width: 10),
                           Text(
                             '設定',
-                            style: GoogleFonts.zenMaruGothic(fontSize: 14),
+                            style: TextStyle(fontSize: 14),
                           ),
                         ],
                       ),
@@ -227,7 +227,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           const SizedBox(height: 24),
           Text(
             '施術を追加しましょう',
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
               color: AppTheme.textPrimary,
@@ -237,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           Text(
             '＋ ボタンをタップして\n最初の施術を記録してください',
             textAlign: TextAlign.center,
-            style: GoogleFonts.zenMaruGothic(
+            style: TextStyle(
               fontSize: 14,
               color: AppTheme.textSecondary,
               height: 1.5,
